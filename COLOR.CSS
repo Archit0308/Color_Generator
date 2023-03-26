@@ -1,0 +1,169 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(100deg, #D6FF7F, #00B3CC, #402565, #30BE96, #F40076, #DF98FA, #E233FF, #FF6B00, 
+    #F14658, #DC2537, #F06966, #FAD6A6, #ED7B84, #9055FF, #DF98FA, #9055FF, #CB5EEE, #4BE1EC, #2F80ED,
+    #B2FFDA, #9055FF, #13E2DA, #0B63F6, #003CC5, #000066, #6699FF, #737DFE, #FFCAC9, #FF0076, #590FB7, 
+    #F40076, #342711, #FA7CBB, #F14658);
+    background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+.wrapper {
+  width: 450px;
+  padding: 25px;
+  background: transparent;
+  border-radius: 7px;
+  border-color: black;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+}
+.wrapper .gradient-box {
+  height: 220px;
+  width: 100%;
+  border-radius: 7px;
+  background: linear-gradient(to left top, #5665E9, #A271F8);
+}
+
+.wrapper .row {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.options p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.row :where(.column, button) {
+  width: calc(100% / 2 - 12px);
+}
+.options .select-box {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #000000;
+}
+
+.select-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.12rem;
+  background: none;
+}
+
+.options .palette {
+  margin-left: 60px;
+}
+.palette input {
+  height: 41px;
+  width: calc(100% / 2 - 20px);
+}
+.palette input:last-child {
+  margin-left: 6px;
+}
+.wrapper textarea {
+  width: 100%;
+  color: #000000;
+  font-size: 1.05rem;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transition: background 0.5s;
+}
+
+.wrapper textarea:hover{
+    background-color: #111010;
+    color: white;
+}
+
+.buttons button {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  color: #000000;
+  margin: 0 0 -15px;
+  font-size: 1.09rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transition: background 0.5s;
+  background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+}
+
+.buttons .refresh {
+  background: transparent;
+}
+
+.refresh:hover {
+    background: #111010;
+    color: #fff;
+}
+
+.buttons .copy {
+  background: transparent;
+}
+.buttons .copy:hover {
+  background: #111010;
+  color: #fff;
+}
+
+@media screen and (max-width: 432px) {
+  .wrapper {
+    padding: 25px 20px;
+  }
+  .row :where(.column, button) {
+    width: calc(100% / 2 - 8px);
+  }
+  .options .select-box {
+    padding: 8px 15px;
+  }
+  .options .palette  {
+    margin-left: 40px;
+  }
+  .options .colors {
+    display: flex;
+    justify-content: space-between;
+  }
+  .palette input {
+    width: calc(100% / 2 - 5px);
+  }
+  .palette input:last-child {
+    margin-left: 0;
+  }
+}
