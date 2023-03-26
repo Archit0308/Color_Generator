@@ -1,3 +1,4 @@
+// Select DOM elements
 const gradientBox = document.querySelector(".gradient-box");
 const selectMenu = document.querySelector(".select-box select");
 const colorInputs = document.querySelectorAll(".colors input");
@@ -5,11 +6,13 @@ const textarea = document.querySelector("textarea");
 const refreshBtn = document.querySelector(".refresh");
 const copyBtn = document.querySelector(".copy");
 
+// Generate a random hex color code
 const getRandomColor = () => {
     const randomHex = Math.floor(Math.random() * 0xffffff).toString(16);
     return `#${randomHex}`;
 }
 
+// Generate a gradient based on selected or random colors
 const generateGradient = (isRandom) => {
     if(isRandom) { 
         colorInputs[0].value = getRandomColor();
@@ -20,12 +23,14 @@ const generateGradient = (isRandom) => {
     textarea.value = `background: ${gradient};`;
 }
 
+// Copy generated code to clipboard
 const copyCode = () => {
     navigator.clipboard.writeText(textarea.value);
     copyBtn.innerText = "Code Copied";
     setTimeout(() => copyBtn.innerText = "Copy Code", 1600);
 }
 
+// Event listeners for color input changes, select menu changes, refresh button, and copy button
 colorInputs.forEach(input => {
     input.addEventListener("input", () => generateGradient(false));
 });
